@@ -25,7 +25,6 @@ export default function ProductForm({ initialData, mode }: ProductFormProps) {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [newFiles, setNewFiles] = useState<File[]>([]);
   const newFilesRef = useRef<File[]>([]);
   const [previewUrls, setPreviewUrls] = useState<string[]>([]);
 
@@ -66,7 +65,6 @@ export default function ProductForm({ initialData, mode }: ProductFormProps) {
     
     const updated = [...newFilesRef.current, ...files];
     newFilesRef.current = updated;
-    setNewFiles(updated);
 
     // Generate preview URLs
     const urls = files.map((file) => URL.createObjectURL(file));
@@ -83,7 +81,6 @@ export default function ProductForm({ initialData, mode }: ProductFormProps) {
   const removeNewFile = (index: number) => {
     const updatedFiles = newFilesRef.current.filter((_, i) => i !== index);
     newFilesRef.current = updatedFiles;
-    setNewFiles(updatedFiles);
     setPreviewUrls((prev) => prev.filter((_, i) => i !== index));
   };
 
