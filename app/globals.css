@@ -11,7 +11,7 @@
   }
 
   body {
-    @apply bg-cream font-sans text-brand-dark antialiased;
+    @apply bg-ivory font-sans text-brand-dark antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -19,7 +19,7 @@
   }
 
   ::selection {
-    @apply bg-brand-primary/20 text-brand-dark;
+    @apply bg-brand-accent/30 text-brand-dark;
   }
 
   /* Custom scrollbar */
@@ -28,15 +28,15 @@
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-beige-50;
+    @apply bg-ivory;
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply rounded-full bg-beige-300;
+    @apply rounded-full bg-beige-200;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-beige-400;
+    @apply bg-beige-300;
   }
 }
 

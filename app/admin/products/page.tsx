@@ -69,7 +69,7 @@ export default function AdminProductsPage() {
         </div>
         <Link
           href="/admin/products/new"
-          className="inline-flex items-center gap-2 bg-brand-dark px-6 py-3 text-xs font-medium uppercase tracking-wider text-white transition-colors hover:bg-brand-primary"
+          className="inline-flex items-center gap-2 bg-brand-secondary px-6 py-3 text-xs font-medium uppercase tracking-wider text-white transition-colors hover:bg-brand-accent hover:text-brand-secondary"
         >
           ➕ Add Product
         </Link>
@@ -176,14 +176,14 @@ export default function AdminProductsPage() {
                       <Link
                         href={`/product/${product.slug}`}
                         target="_blank"
-                        className="rounded-sm p-2 text-beige-400 transition-colors hover:bg-beige-50 hover:text-brand-dark"
+                        className="rounded-sm p-2 text-beige-400 transition-colors hover:bg-ivory hover:text-brand-dark"
                         title="View"
                       >
                         👁
                       </Link>
                       <Link
                         href={`/admin/products/edit/${product.id}`}
-                        className="rounded-sm p-2 text-beige-400 transition-colors hover:bg-beige-50 hover:text-brand-primary"
+                        className="rounded-sm p-2 text-beige-400 transition-colors hover:bg-ivory hover:text-brand-accent"
                         title="Edit"
                       >
                         ✏️
@@ -219,7 +219,7 @@ export default function AdminProductsPage() {
             </p>
             <Link
               href="/admin/products/new"
-              className="mt-6 inline-block bg-brand-dark px-6 py-3 text-xs font-medium uppercase tracking-wider text-white transition-colors hover:bg-brand-primary"
+              className="mt-6 inline-block bg-brand-secondary px-6 py-3 text-xs font-medium uppercase tracking-wider text-white transition-colors hover:bg-brand-accent hover:text-brand-secondary"
             >
               Add First Product
             </Link>

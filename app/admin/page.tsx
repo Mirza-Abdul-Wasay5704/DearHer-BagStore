@@ -70,20 +70,20 @@ export default function AdminDashboard() {
         <div className="flex flex-wrap gap-3">
           <Link
             href="/admin/products/new"
-            className="inline-flex items-center gap-2 bg-brand-dark px-6 py-3 text-xs font-medium uppercase tracking-wider text-white transition-colors hover:bg-brand-primary"
+            className="inline-flex items-center gap-2 bg-brand-secondary px-6 py-3 text-xs font-medium uppercase tracking-wider text-white transition-colors hover:bg-brand-accent hover:text-brand-secondary"
           >
             ➕ Add New Product
           </Link>
           <Link
             href="/admin/products"
-            className="inline-flex items-center gap-2 border border-beige-200 bg-white px-6 py-3 text-xs font-medium uppercase tracking-wider text-brand-dark transition-colors hover:border-brand-primary"
+            className="inline-flex items-center gap-2 border border-beige-200 bg-white px-6 py-3 text-xs font-medium uppercase tracking-wider text-brand-dark transition-colors hover:border-brand-accent"
           >
             📋 Manage Products
           </Link>
           <Link
             href="/"
             target="_blank"
-            className="inline-flex items-center gap-2 border border-beige-200 bg-white px-6 py-3 text-xs font-medium uppercase tracking-wider text-brand-dark transition-colors hover:border-brand-primary"
+            className="inline-flex items-center gap-2 border border-beige-200 bg-white px-6 py-3 text-xs font-medium uppercase tracking-wider text-brand-dark transition-colors hover:border-brand-accent"
           >
             🌐 View Store
           </Link>

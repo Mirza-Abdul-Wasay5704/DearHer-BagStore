@@ -9,11 +9,11 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="bg-cream">
+    <div className="bg-ivory">
       {/* Hero */}
-      <section className="bg-beige-50 py-20 md:py-28">
+      <section className="bg-ivory py-20 md:py-28">
         <div className="mx-auto max-w-3xl px-4 text-center">
-          <p className="text-xs font-medium uppercase tracking-[0.3em] text-brand-primary">
+          <p className="text-xs font-medium uppercase tracking-[0.3em] text-brand-accent">
             Our Story
           </p>
           <h1 className="mt-4 font-serif text-4xl text-brand-dark md:text-5xl">
@@ -42,7 +42,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="mx-auto h-px w-16 bg-brand-primary/30" />
+            <div className="mx-auto h-px w-16 bg-brand-accent/30" />
 
             <div>
               <h2 className="font-serif text-2xl text-brand-dark md:text-3xl">
@@ -56,7 +56,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="mx-auto h-px w-16 bg-brand-primary/30" />
+            <div className="mx-auto h-px w-16 bg-brand-accent/30" />
 
             <div>
               <h2 className="font-serif text-2xl text-brand-dark md:text-3xl">
@@ -75,7 +75,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values Grid */}
-      <section className="bg-beige-50 py-20 md:py-28">
+      <section className="bg-ivory py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-center font-serif text-3xl text-brand-dark">
             What We Stand For

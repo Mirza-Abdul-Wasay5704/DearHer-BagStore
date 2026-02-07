@@ -46,7 +46,7 @@ export default function GiftForHer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center">
-          <p className="text-xs font-medium uppercase tracking-[0.3em] text-brand-primary">
+          <p className="text-xs font-medium uppercase tracking-[0.3em] text-brand-accent">
             Gift Guide
           </p>
           <h2 className="mt-4 font-serif text-3xl text-brand-dark md:text-4xl">
@@ -63,7 +63,7 @@ export default function GiftForHer() {
             <Link
               key={category.query}
               href={`/shop?gift=${category.query}`}
-              className="group flex flex-col items-center rounded-sm border border-beige-200 bg-beige-50 p-6 text-center transition-all duration-300 hover:border-brand-primary/30 hover:bg-white hover:shadow-sm"
+              className="group flex flex-col items-center rounded-sm border border-beige-200 bg-ivory p-6 text-center transition-all duration-300 hover:border-brand-accent/30 hover:bg-white hover:shadow-sm"
             >
               <span className="text-3xl">{category.emoji}</span>
               <h3 className="mt-3 font-serif text-sm text-brand-dark">

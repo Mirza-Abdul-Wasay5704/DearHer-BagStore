@@ -27,11 +27,11 @@ export default function FeaturedProducts() {
   }, []);
 
   return (
-    <section className="bg-cream py-20 md:py-28">
+    <section className="bg-ivory py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center">
-          <p className="text-xs font-medium uppercase tracking-[0.3em] text-brand-primary">
+          <p className="text-xs font-medium uppercase tracking-[0.3em] text-brand-accent">
             Curated Selection
           </p>
           <h2 className="mt-4 font-serif text-3xl text-brand-dark md:text-4xl">
@@ -65,7 +65,7 @@ export default function FeaturedProducts() {
         <div className="mt-14 text-center">
           <Link
             href="/shop"
-            className="inline-block border border-brand-dark px-10 py-4 text-xs font-medium uppercase tracking-[0.2em] text-brand-dark transition-all hover:bg-brand-dark hover:text-white"
+            className="inline-block border border-brand-secondary px-10 py-4 text-xs font-medium uppercase tracking-[0.2em] text-brand-secondary transition-all hover:bg-brand-secondary hover:text-white"
           >
             View All Collection
           </Link>

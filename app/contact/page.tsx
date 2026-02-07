@@ -12,11 +12,11 @@ export default function ContactPage() {
     process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "923141181535";
 
   return (
-    <div className="bg-cream">
+    <div className="bg-ivory">
       {/* Hero */}
-      <section className="bg-beige-50 py-20 md:py-28">
+      <section className="bg-ivory py-20 md:py-28">
         <div className="mx-auto max-w-3xl px-4 text-center">
-          <p className="text-xs font-medium uppercase tracking-[0.3em] text-brand-primary">
+          <p className="text-xs font-medium uppercase tracking-[0.3em] text-brand-accent">
             Get in Touch
           </p>
           <h1 className="mt-4 font-serif text-4xl text-brand-dark md:text-5xl">
@@ -109,7 +109,7 @@ export default function ContactPage() {
                   </label>
                   <input
                     type="text"
-                    className="w-full border border-beige-200 bg-white px-4 py-3 text-sm text-brand-dark focus:border-brand-primary focus:outline-none"
+                    className="w-full border border-beige-200 bg-white px-4 py-3 text-sm text-brand-dark focus:border-brand-accent focus:outline-none"
                     placeholder="Your name"
                   />
                 </div>
@@ -119,7 +119,7 @@ export default function ContactPage() {
                   </label>
                   <input
                     type="email"
-                    className="w-full border border-beige-200 bg-white px-4 py-3 text-sm text-brand-dark focus:border-brand-primary focus:outline-none"
+                    className="w-full border border-beige-200 bg-white px-4 py-3 text-sm text-brand-dark focus:border-brand-accent focus:outline-none"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -129,13 +129,13 @@ export default function ContactPage() {
                   </label>
                   <textarea
                     rows={4}
-                    className="w-full border border-beige-200 bg-white px-4 py-3 text-sm text-brand-dark focus:border-brand-primary focus:outline-none"
+                    className="w-full border border-beige-200 bg-white px-4 py-3 text-sm text-brand-dark focus:border-brand-accent focus:outline-none"
                     placeholder="How can we help you?"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-brand-dark py-3 text-xs font-medium uppercase tracking-[0.2em] text-white transition-colors hover:bg-brand-primary"
+                  className="w-full bg-brand-secondary py-3 text-xs font-medium uppercase tracking-[0.2em] text-white transition-colors hover:bg-brand-accent hover:text-brand-secondary"
                 >
                   Send Message
                 </button>
@@ -164,7 +164,7 @@ function ContactItem({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-start gap-4 transition-colors hover:text-brand-primary"
+      className="flex items-start gap-4 transition-colors hover:text-brand-accent"
     >
       <span className="text-xl">{icon}</span>
       <div>

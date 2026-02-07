@@ -13,7 +13,7 @@ export default function CartPage() {
 
   if (items.length === 0) {
     return (
-      <div className="flex min-h-[60vh] items-center justify-center bg-cream">
+      <div className="flex min-h-[60vh] items-center justify-center bg-ivory">
         <div className="text-center">
           <span className="text-5xl">🛍</span>
           <h2 className="mt-4 font-serif text-2xl text-brand-dark">
@@ -24,7 +24,7 @@ export default function CartPage() {
           </p>
           <Link
             href="/shop"
-            className="mt-6 inline-block border border-brand-dark px-8 py-3 text-xs uppercase tracking-wider text-brand-dark transition-colors hover:bg-brand-dark hover:text-white"
+            className="mt-6 inline-block border border-brand-secondary px-8 py-3 text-xs uppercase tracking-wider text-brand-secondary transition-colors hover:bg-brand-secondary hover:text-white"
           >
             Start Shopping
           </Link>
@@ -43,7 +43,7 @@ export default function CartPage() {
   );
 
   return (
-    <div className="bg-cream py-8 md:py-16">
+    <div className="bg-ivory py-8 md:py-16">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-10">
@@ -85,7 +85,7 @@ export default function CartPage() {
                   <div>
                     <Link
                       href={`/product/${item.slug}`}
-                      className="font-serif text-sm text-brand-dark hover:text-brand-primary md:text-base"
+                      className="font-serif text-sm text-brand-dark hover:text-brand-accent md:text-base"
                     >
                       {item.name}
                     </Link>
@@ -93,7 +93,7 @@ export default function CartPage() {
                       {item.color && <span>Color: {item.color}</span>}
                       {item.size && <span>Size: {item.size}</span>}
                     </div>
-                    <p className="mt-2 text-sm font-medium text-brand-primary">
+                    <p className="mt-2 text-sm font-medium text-brand-dark">
                       {formatPrice(item.price)}
                     </p>
                   </div>
@@ -180,7 +180,7 @@ export default function CartPage() {
                 <span className="text-sm font-medium text-brand-dark">
                   Total
                 </span>
-                <span className="font-serif text-xl text-brand-primary">
+                <span className="font-serif text-xl text-brand-dark">
                   {formatPrice(totalPrice)}
                 </span>
               </div>
@@ -210,7 +210,7 @@ export default function CartPage() {
               {/* Continue Shopping */}
               <Link
                 href="/shop"
-                className="mt-4 block text-center text-xs text-beige-500 underline transition-colors hover:text-brand-primary"
+                className="mt-4 block text-center text-xs text-beige-500 underline transition-colors hover:text-brand-accent"
               >
                 Continue Shopping
               </Link>

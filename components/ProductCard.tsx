@@ -50,7 +50,7 @@ function ProductCard({ product, priority = false }: ProductCardProps) {
         {/* Featured Badge */}
         {product.featured && (
           <div className="absolute left-3 top-3">
-            <span className="bg-brand-primary/90 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.15em] text-white">
+            <span className="bg-brand-accent px-3 py-1 text-[10px] font-medium uppercase tracking-[0.15em] text-brand-secondary">
               Featured
             </span>
           </div>
@@ -59,13 +59,13 @@ function ProductCard({ product, priority = false }: ProductCardProps) {
 
       {/* Product Info */}
       <div className="mt-4 text-center">
-        <h3 className="font-serif text-base text-brand-dark transition-colors group-hover:text-brand-primary md:text-lg">
+        <h3 className="font-serif text-base text-brand-dark transition-colors group-hover:text-brand-accent md:text-lg">
           {product.name}
         </h3>
         <p className="mt-1 text-xs tracking-wider text-beige-500">
           {product.patternType}
         </p>
-        <p className="mt-2 text-sm font-medium text-brand-primary">
+        <p className="mt-2 text-sm font-medium text-brand-dark">
           {formatPrice(product.price)}
         </p>
       </div>

@@ -41,7 +41,7 @@ export default function EditProductPage() {
           </p>
           <Link
             href="/admin/products"
-            className="mt-4 inline-block text-sm text-brand-primary underline"
+            className="mt-4 inline-block text-sm text-brand-accent underline"
           >
             Back to Products
           </Link>

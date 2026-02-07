@@ -7,26 +7,33 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        ivory: "#FFFFF0",
-        cream: "#FFF8F0",
+        // Primary Background: Soft Ivory / Warm Cream
+        ivory: "#FAF6F1",
+        cream: "#FAF6F1",
+        // Supporting Neutral scale: Warm Taupe / Sand
         beige: {
-          50: "#FDF8F3",
+          50: "#FAF6F1",
           100: "#F5EDE4",
-          200: "#EDE0D1",
-          300: "#DFD0BC",
-          400: "#C9B698",
-          500: "#B39B74",
-          600: "#9A7F56",
-          700: "#7A6344",
-          800: "#5E4C35",
-          900: "#3E3223",
+          200: "#D6C7B8",
+          300: "#C9B9A8",
+          400: "#B8A494",
+          500: "#9A8A7A",
+          600: "#7A6B5C",
+          700: "#5C4F42",
+          800: "#4A3B2A",
+          900: "#2F2418",
         },
         brand: {
-          primary: "#8B7355",
-          secondary: "#C9A87C",
-          dark: "#3E3223",
-          light: "#F5EDE4",
-          accent: "#D4A574",
+          // Accent: Muted Blush / Nude Rose
+          primary: "#E7C1B3",
+          // CTA: Deep Cocoa Brown
+          secondary: "#2F2418",
+          // Primary Text: Warm Mocha Brown
+          dark: "#4A3B2A",
+          // Light background variant
+          light: "#FAF6F1",
+          // Accent/highlight
+          accent: "#E7C1B3",
         },
       },
       fontFamily: {

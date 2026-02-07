@@ -82,11 +82,11 @@ export default function ShopPage() {
   if (loading) return <PageLoader />;
 
   return (
-    <div className="bg-cream">
+    <div className="bg-ivory">
       {/* Page Header */}
-      <section className="bg-beige-50 py-12 md:py-16">
+      <section className="bg-ivory py-12 md:py-16">
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
-          <p className="text-xs font-medium uppercase tracking-[0.3em] text-brand-primary">
+          <p className="text-xs font-medium uppercase tracking-[0.3em] text-brand-accent">
             Our Collection
           </p>
           <h1 className="mt-3 font-serif text-3xl text-brand-dark md:text-4xl">
@@ -160,7 +160,7 @@ export default function ShopPage() {
                     </p>
                     <button
                       onClick={() => setFilters(defaultFilters)}
-                      className="mt-6 border border-brand-dark px-6 py-2.5 text-xs uppercase tracking-wider text-brand-dark transition-colors hover:bg-brand-dark hover:text-white"
+                      className="mt-6 border border-brand-secondary px-6 py-2.5 text-xs uppercase tracking-wider text-brand-secondary transition-colors hover:bg-brand-secondary hover:text-white"
                     >
                       Reset Filters
                     </button>

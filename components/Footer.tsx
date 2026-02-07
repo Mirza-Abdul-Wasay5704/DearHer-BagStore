@@ -1,19 +1,24 @@
 // components/Footer.tsx — Site footer
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "923141181535";
 
   return (
-    <footer className="border-t border-beige-200 bg-beige-50">
+    <footer className="border-t border-beige-200 bg-ivory">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-4">
           {/* Brand */}
           <div className="md:col-span-1">
-            <h3 className="font-serif text-2xl tracking-wider text-brand-dark">
-              Dear Her
-            </h3>
+            <Image
+              src="/logo.png"
+              alt="Dear Her"
+              width={140}
+              height={60}
+              className="h-14 w-auto"
+            />
             <p className="mt-4 text-sm leading-relaxed text-beige-600">
               Handpicked bags with artistic prints. Designed for the woman who
               appreciates elegance in every detail.
@@ -56,7 +61,7 @@ export default function Footer() {
                   href={`https://wa.me/${whatsappNumber}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-beige-600 transition-colors hover:text-brand-primary"
+                  className="text-sm text-beige-600 transition-colors hover:text-brand-accent"
                 >
                   WhatsApp
                 </a>
@@ -66,7 +71,7 @@ export default function Footer() {
                   href="https://instagram.com/dearher"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-beige-600 transition-colors hover:text-brand-primary"
+                  className="text-sm text-beige-600 transition-colors hover:text-brand-accent"
                 >
                   Instagram
                 </a>
@@ -76,7 +81,7 @@ export default function Footer() {
                   href="https://facebook.com/dearher"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-beige-600 transition-colors hover:text-brand-primary"
+                  className="text-sm text-beige-600 transition-colors hover:text-brand-accent"
                 >
                   Facebook
                 </a>
@@ -107,7 +112,7 @@ function FooterLink({
     <li>
       <Link
         href={href}
-        className="text-sm text-beige-600 transition-colors hover:text-brand-primary"
+        className="text-sm text-beige-600 transition-colors hover:text-brand-accent"
       >
         {children}
       </Link>

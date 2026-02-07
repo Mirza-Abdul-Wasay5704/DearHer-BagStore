@@ -4,13 +4,13 @@ export default function WhatsAppCTA() {
     process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "923141181535";
 
   return (
-    <section className="bg-brand-dark py-20 md:py-28">
+    <section className="bg-brand-secondary py-20 md:py-28">
       <div className="mx-auto max-w-3xl px-4 text-center">
         <span className="text-4xl">💬</span>
         <h2 className="mt-6 font-serif text-3xl text-white md:text-4xl">
           Need Help Choosing?
         </h2>
-        <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-beige-300">
+        <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-beige-200">
           Our team is here to help you find the perfect bag. Chat with us on
           WhatsApp for personalized recommendations.
         </p>

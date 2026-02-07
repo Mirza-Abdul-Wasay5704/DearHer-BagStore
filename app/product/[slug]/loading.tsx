@@ -1,7 +1,7 @@
 // app/product/[slug]/loading.tsx — Product detail loading skeleton
 export default function ProductLoading() {
   return (
-    <div className="bg-cream py-8 md:py-16">
+    <div className="bg-ivory py-8 md:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb skeleton */}
         <div className="mb-8 flex items-center gap-2">

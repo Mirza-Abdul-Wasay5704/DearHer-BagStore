@@ -2,6 +2,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { signOut } from "@/lib/auth";
 
@@ -41,8 +42,14 @@ export default function AdminSidebar() {
       <div className="flex h-full flex-col">
         {/* Logo */}
         <div className="border-b border-beige-200 px-6 py-5">
-          <Link href="/" className="font-serif text-xl tracking-wider text-brand-dark">
-            Dear Her
+          <Link href="/" className="block">
+            <Image
+              src="/logo.png"
+              alt="Dear Her"
+              width={100}
+              height={40}
+              className="h-9 w-auto"
+            />
           </Link>
           <p className="mt-1 text-[10px] uppercase tracking-widest text-beige-400">
             Admin Panel
@@ -63,8 +70,8 @@ export default function AdminSidebar() {
                 href={item.href}
                 className={`flex items-center gap-3 rounded-sm px-3 py-3 text-sm transition-colors ${
                   isActive
-                    ? "bg-brand-light text-brand-primary"
-                    : "text-beige-600 hover:bg-beige-50 hover:text-brand-dark"
+                    ? "bg-brand-light text-brand-accent"
+                    : "text-beige-600 hover:bg-ivory hover:text-brand-dark"
                 }`}
               >
                 <span>{item.icon}</span>
@@ -78,7 +85,7 @@ export default function AdminSidebar() {
         <div className="border-t border-beige-200 p-3">
           <Link
             href="/"
-            className="flex items-center gap-3 rounded-sm px-3 py-3 text-sm text-beige-600 transition-colors hover:bg-beige-50 hover:text-brand-dark"
+            className="flex items-center gap-3 rounded-sm px-3 py-3 text-sm text-beige-600 transition-colors hover:bg-ivory hover:text-brand-dark"
           >
             <span>🌐</span>
             <span>View Store</span>

@@ -48,8 +48,8 @@ export default function ProductGallery({
               onClick={() => setSelectedIndex(index)}
               className={`relative aspect-square w-20 flex-shrink-0 overflow-hidden rounded-sm border-2 transition-all ${
                 selectedIndex === index
-                  ? "border-brand-primary"
-                  : "border-beige-200 hover:border-beige-400"
+                  ? "border-brand-accent"
+                  : "border-beige-200 hover:border-beige-300"
               }`}
             >
               <Image

@@ -44,7 +44,7 @@ export default function ProductDetailPage() {
 
   if (!product) {
     return (
-      <div className="flex min-h-[60vh] items-center justify-center bg-cream">
+      <div className="flex min-h-[60vh] items-center justify-center bg-ivory">
         <div className="text-center">
           <span className="text-5xl">😔</span>
           <h2 className="mt-4 font-serif text-2xl text-brand-dark">
@@ -55,7 +55,7 @@ export default function ProductDetailPage() {
           </p>
           <Link
             href="/shop"
-            className="mt-6 inline-block border border-brand-dark px-8 py-3 text-xs uppercase tracking-wider text-brand-dark transition-colors hover:bg-brand-dark hover:text-white"
+            className="mt-6 inline-block border border-brand-secondary px-8 py-3 text-xs uppercase tracking-wider text-brand-secondary transition-colors hover:bg-brand-secondary hover:text-white"
           >
             Back to Shop
           </Link>
@@ -92,15 +92,15 @@ export default function ProductDetailPage() {
   };
 
   return (
-    <div className="bg-cream py-8 md:py-16">
+    <div className="bg-ivory py-8 md:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb */}
         <nav className="mb-8 flex items-center gap-2 text-xs text-beige-500">
-          <Link href="/" className="hover:text-brand-primary">
+          <Link href="/" className="hover:text-brand-accent">
             Home
           </Link>
           <span>/</span>
-          <Link href="/shop" className="hover:text-brand-primary">
+          <Link href="/shop" className="hover:text-brand-accent">
             Shop
           </Link>
           <span>/</span>
@@ -120,14 +120,14 @@ export default function ProductDetailPage() {
             {/* Header */}
             <div>
               {product.featured && (
-                <span className="mb-3 inline-block bg-brand-primary/10 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.15em] text-brand-primary">
+                <span className="mb-3 inline-block bg-brand-accent/20 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.15em] text-brand-dark">
                   Featured
                 </span>
               )}
               <h1 className="font-serif text-3xl text-brand-dark md:text-4xl">
                 {product.name}
               </h1>
-              <p className="mt-3 text-2xl font-medium text-brand-primary">
+              <p className="mt-3 text-2xl font-medium text-brand-dark">
                 {formatPrice(product.price)}
               </p>
             </div>
@@ -174,8 +174,8 @@ export default function ProductDetailPage() {
                       onClick={() => setSelectedColor(color)}
                       className={`border px-4 py-2 text-xs transition-all ${
                         selectedColor === color
-                          ? "border-brand-primary bg-brand-primary text-white"
-                          : "border-beige-200 text-beige-600 hover:border-brand-primary/50"
+                          ? "border-brand-accent bg-brand-accent text-brand-secondary"
+                          : "border-beige-200 text-beige-600 hover:border-brand-accent/50"
                       }`}
                     >
                       {color}
@@ -217,7 +217,7 @@ export default function ProductDetailPage() {
                 className={`w-full py-4 text-xs font-medium uppercase tracking-[0.2em] transition-all ${
                   addedToCart
                     ? "bg-green-600 text-white"
-                    : "border border-brand-dark bg-brand-dark text-white hover:bg-transparent hover:text-brand-dark"
+                    : "border border-brand-secondary bg-brand-secondary text-white hover:bg-brand-accent hover:border-brand-accent hover:text-brand-secondary"
                 }`}
               >
                 {addedToCart ? "✓ Added to Cart" : "Add to Cart"}

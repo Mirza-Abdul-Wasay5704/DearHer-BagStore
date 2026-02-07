@@ -29,7 +29,7 @@ export default function ProductFilters({
         </h3>
         <button
           onClick={onReset}
-          className="text-xs text-beige-500 underline transition-colors hover:text-brand-primary"
+          className="text-xs text-beige-500 underline transition-colors hover:text-brand-accent"
         >
           Reset All
         </button>
@@ -45,7 +45,7 @@ export default function ProductFilters({
           onChange={(e) =>
             onFilterChange({ ...filters, sortBy: e.target.value })
           }
-          className="w-full border border-beige-200 bg-white px-3 py-2.5 text-sm text-brand-dark focus:border-brand-primary focus:outline-none"
+          className="w-full border border-beige-200 bg-white px-3 py-2.5 text-sm text-brand-dark focus:border-brand-accent focus:outline-none"
         >
           <option value="newest">Newest First</option>
           <option value="price-low">Price: Low to High</option>
@@ -70,7 +70,7 @@ export default function ProductFilters({
                 priceRange: [Number(e.target.value), filters.priceRange[1]],
               })
             }
-            className="w-full border border-beige-200 bg-white px-3 py-2.5 text-sm text-brand-dark focus:border-brand-primary focus:outline-none"
+            className="w-full border border-beige-200 bg-white px-3 py-2.5 text-sm text-brand-dark focus:border-brand-accent focus:outline-none"
           />
           <span className="text-beige-400">—</span>
           <input
@@ -83,7 +83,7 @@ export default function ProductFilters({
                 priceRange: [filters.priceRange[0], Number(e.target.value)],
               })
             }
-            className="w-full border border-beige-200 bg-white px-3 py-2.5 text-sm text-brand-dark focus:border-brand-primary focus:outline-none"
+            className="w-full border border-beige-200 bg-white px-3 py-2.5 text-sm text-brand-dark focus:border-brand-accent focus:outline-none"
           />
         </div>
       </div>
@@ -98,7 +98,7 @@ export default function ProductFilters({
           onChange={(e) =>
             onFilterChange({ ...filters, patternType: e.target.value })
           }
-          className="w-full border border-beige-200 bg-white px-3 py-2.5 text-sm text-brand-dark focus:border-brand-primary focus:outline-none"
+          className="w-full border border-beige-200 bg-white px-3 py-2.5 text-sm text-brand-dark focus:border-brand-accent focus:outline-none"
         >
           <option value="">All Patterns</option>
           {PATTERN_TYPES.map((type) => (
@@ -119,7 +119,7 @@ export default function ProductFilters({
           onChange={(e) =>
             onFilterChange({ ...filters, color: e.target.value })
           }
-          className="w-full border border-beige-200 bg-white px-3 py-2.5 text-sm text-brand-dark focus:border-brand-primary focus:outline-none"
+          className="w-full border border-beige-200 bg-white px-3 py-2.5 text-sm text-brand-dark focus:border-brand-accent focus:outline-none"
         >
           <option value="">All Colors</option>
           {COLOR_OPTIONS.map((color) => (

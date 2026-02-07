@@ -3,6 +3,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useCart } from "@/contexts/CartContext";
 
 export default function Navbar() {
@@ -10,14 +11,19 @@ export default function Navbar() {
   const { totalItems } = useCart();
 
   return (
-    <nav className="fixed top-0 z-50 w-full border-b border-beige-200 bg-cream/95 backdrop-blur-sm">
+    <nav className="fixed top-4 z-50 w-full border-b border-beige-200 bg-ivory/95 backdrop-blur-sm">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between md:h-20">
+        <div className="flex h-20 items-center justify-between md:h-24">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <span className="font-serif text-2xl tracking-wider text-brand-dark md:text-3xl">
-              Dear Her
-            </span>
+            <Image
+              src="/logo.png"
+              alt="Dear Her"
+              width={160}
+              height={70}
+              className="h-40 w-auto md:h-40"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -33,7 +39,7 @@ export default function Navbar() {
             {/* Cart Icon */}
             <Link
               href="/cart"
-              className="relative p-2 text-brand-dark transition-colors hover:text-brand-primary"
+              className="relative p-2 text-brand-dark transition-colors hover:text-brand-accent"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +56,7 @@ export default function Navbar() {
                 />
               </svg>
               {totalItems > 0 && (
-                <span className="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-brand-primary text-xs text-white">
+                <span className="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-brand-secondary text-xs text-white">
                   {totalItems}
                 </span>
               )}
@@ -143,7 +149,7 @@ function NavLink({
   return (
     <Link
       href={href}
-      className="text-sm font-medium tracking-widest text-brand-dark/80 transition-colors hover:text-brand-primary"
+      className="text-sm font-medium tracking-widest text-brand-dark/80 transition-colors hover:text-brand-accent"
     >
       {children}
     </Link>
@@ -163,7 +169,7 @@ function MobileNavLink({
     <Link
       href={href}
       onClick={onClick}
-      className="block px-2 py-3 text-sm font-medium tracking-widest text-brand-dark/80 transition-colors hover:text-brand-primary"
+      className="block px-2 py-3 text-sm font-medium tracking-widest text-brand-dark/80 transition-colors hover:text-brand-accent"
     >
       {children}
     </Link>

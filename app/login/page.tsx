@@ -3,6 +3,7 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 import { signIn } from "@/lib/auth";
 import { useAuth } from "@/contexts/AuthContext";
 import LoadingSpinner from "@/components/LoadingSpinner";
@@ -45,15 +46,19 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="flex min-h-[80vh] items-center justify-center bg-cream">
+    <div className="flex min-h-[80vh] items-center justify-center bg-ivory">
       <div className="w-full max-w-md px-4">
         <div className="rounded-sm border border-beige-200 bg-white p-8 shadow-sm">
           {/* Header */}
           <div className="mb-8 text-center">
-            <h1 className="font-serif text-3xl tracking-wider text-brand-dark">
-              Dear Her
-            </h1>
-            <p className="mt-2 text-xs uppercase tracking-widest text-beige-400">
+            <Image
+              src="/logo.png"
+              alt="Dear Her"
+              width={160}
+              height={70}
+              className="mx-auto h-16 w-auto"
+            />
+            <p className="mt-4 text-xs uppercase tracking-widest text-beige-400">
               Admin Access
             </p>
           </div>
@@ -75,7 +80,7 @@ export default function LoginPage() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full border border-beige-200 bg-white px-4 py-3 text-sm text-brand-dark placeholder-beige-400 focus:border-brand-primary focus:outline-none"
+                className="w-full border border-beige-200 bg-white px-4 py-3 text-sm text-brand-dark placeholder-beige-400 focus:border-brand-accent focus:outline-none"
                 placeholder="admin@dearher.com"
                 required
                 autoComplete="email"
@@ -90,7 +95,7 @@ export default function LoginPage() {
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full border border-beige-200 bg-white px-4 py-3 text-sm text-brand-dark placeholder-beige-400 focus:border-brand-primary focus:outline-none"
+                className="w-full border border-beige-200 bg-white px-4 py-3 text-sm text-brand-dark placeholder-beige-400 focus:border-brand-accent focus:outline-none"
                 placeholder="••••••••"
                 required
                 autoComplete="current-password"
@@ -100,7 +105,7 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={loading}
-              className="flex w-full items-center justify-center gap-2 bg-brand-dark py-3 text-xs font-medium uppercase tracking-[0.2em] text-white transition-colors hover:bg-brand-primary disabled:opacity-50"
+              className="flex w-full items-center justify-center gap-2 bg-brand-secondary py-3 text-xs font-medium uppercase tracking-[0.2em] text-white transition-colors hover:bg-brand-accent hover:text-brand-secondary disabled:opacity-50"
             >
               {loading && <LoadingSpinner size="sm" />}
               Sign In

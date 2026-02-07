@@ -1,9 +1,9 @@
 // app/shop/loading.tsx — Shop page loading skeleton
 export default function ShopLoading() {
   return (
-    <div className="bg-cream">
+    <div className="bg-ivory">
       {/* Header skeleton */}
-      <section className="bg-beige-50 py-12 md:py-16">
+      <section className="bg-ivory py-12 md:py-16">
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
           <div className="mx-auto h-3 w-24 animate-pulse rounded bg-beige-200" />
           <div className="mx-auto mt-4 h-8 w-48 animate-pulse rounded bg-beige-200" />

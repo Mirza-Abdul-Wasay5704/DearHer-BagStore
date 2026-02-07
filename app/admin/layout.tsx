@@ -20,7 +20,7 @@ export default function AdminLayout({
         main { padding-top: 0 !important; }
       `}</style>
 
-      <div className="flex min-h-screen bg-beige-50">
+      <div className="flex min-h-screen bg-ivory">
         <AdminSidebar />
         <div className="ml-64 flex-1">
           <div className="p-8">{children}</div>

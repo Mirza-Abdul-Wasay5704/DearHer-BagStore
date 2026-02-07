@@ -154,7 +154,7 @@ export default function ProductForm({ initialData, mode }: ProductFormProps) {
             type="text"
             value={formData.name}
             onChange={(e) => handleNameChange(e.target.value)}
-            className="w-full border border-beige-200 bg-white px-4 py-3 text-sm text-brand-dark focus:border-brand-primary focus:outline-none"
+            className="w-full border border-beige-200 bg-white px-4 py-3 text-sm text-brand-dark focus:border-brand-accent focus:outline-none"
             placeholder="e.g., Floral Dreams Tote"
             required
           />
@@ -169,7 +169,7 @@ export default function ProductForm({ initialData, mode }: ProductFormProps) {
             onChange={(e) =>
               setFormData((prev) => ({ ...prev, slug: e.target.value }))
             }
-            className="w-full border border-beige-200 bg-beige-50 px-4 py-3 text-sm text-beige-600 focus:border-brand-primary focus:outline-none"
+            className="w-full border border-beige-200 bg-ivory px-4 py-3 text-sm text-beige-600 focus:border-brand-accent focus:outline-none"
             placeholder="auto-generated-from-name"
           />
         </div>
@@ -190,7 +190,7 @@ export default function ProductForm({ initialData, mode }: ProductFormProps) {
                 price: Number(e.target.value),
               }))
             }
-            className="w-full border border-beige-200 bg-white px-4 py-3 text-sm text-brand-dark focus:border-brand-primary focus:outline-none"
+            className="w-full border border-beige-200 bg-white px-4 py-3 text-sm text-brand-dark focus:border-brand-accent focus:outline-none"
             placeholder="2500"
             min={0}
             required
@@ -209,7 +209,7 @@ export default function ProductForm({ initialData, mode }: ProductFormProps) {
                 stock: Number(e.target.value),
               }))
             }
-            className="w-full border border-beige-200 bg-white px-4 py-3 text-sm text-brand-dark focus:border-brand-primary focus:outline-none"
+            className="w-full border border-beige-200 bg-white px-4 py-3 text-sm text-brand-dark focus:border-brand-accent focus:outline-none"
             placeholder="10"
             min={0}
           />
@@ -225,7 +225,7 @@ export default function ProductForm({ initialData, mode }: ProductFormProps) {
                   featured: e.target.checked,
                 }))
               }
-              className="h-4 w-4 rounded border-beige-300 text-brand-primary focus:ring-brand-primary"
+              className="h-4 w-4 rounded border-beige-300 text-brand-accent focus:ring-brand-accent"
             />
             <span className="text-sm text-brand-dark">Featured Product</span>
           </label>
@@ -243,7 +243,7 @@ export default function ProductForm({ initialData, mode }: ProductFormProps) {
             setFormData((prev) => ({ ...prev, description: e.target.value }))
           }
           rows={4}
-          className="w-full border border-beige-200 bg-white px-4 py-3 text-sm text-brand-dark focus:border-brand-primary focus:outline-none"
+          className="w-full border border-beige-200 bg-white px-4 py-3 text-sm text-brand-dark focus:border-brand-accent focus:outline-none"
           placeholder="Describe this beautiful bag..."
         />
       </div>
@@ -262,7 +262,7 @@ export default function ProductForm({ initialData, mode }: ProductFormProps) {
                 patternType: e.target.value,
               }))
             }
-            className="w-full border border-beige-200 bg-white px-4 py-3 text-sm text-brand-dark focus:border-brand-primary focus:outline-none"
+            className="w-full border border-beige-200 bg-white px-4 py-3 text-sm text-brand-dark focus:border-brand-accent focus:outline-none"
           >
             <option value="">Select Pattern</option>
             {PATTERN_TYPES.map((type) => (
@@ -281,7 +281,7 @@ export default function ProductForm({ initialData, mode }: ProductFormProps) {
             onChange={(e) =>
               setFormData((prev) => ({ ...prev, size: e.target.value }))
             }
-            className="w-full border border-beige-200 bg-white px-4 py-3 text-sm text-brand-dark focus:border-brand-primary focus:outline-none"
+            className="w-full border border-beige-200 bg-white px-4 py-3 text-sm text-brand-dark focus:border-brand-accent focus:outline-none"
           >
             <option value="">Select Size</option>
             {SIZE_OPTIONS.map((size) => (
@@ -300,7 +300,7 @@ export default function ProductForm({ initialData, mode }: ProductFormProps) {
             onChange={(e) =>
               setFormData((prev) => ({ ...prev, material: e.target.value }))
             }
-            className="w-full border border-beige-200 bg-white px-4 py-3 text-sm text-brand-dark focus:border-brand-primary focus:outline-none"
+            className="w-full border border-beige-200 bg-white px-4 py-3 text-sm text-brand-dark focus:border-brand-accent focus:outline-none"
           >
             <option value="">Select Material</option>
             {MATERIAL_OPTIONS.map((material) => (
@@ -325,8 +325,8 @@ export default function ProductForm({ initialData, mode }: ProductFormProps) {
               onClick={() => handleColorToggle(color)}
               className={`rounded-sm border px-3 py-1.5 text-xs transition-all ${
                 formData.colors.includes(color)
-                  ? "border-brand-primary bg-brand-primary text-white"
-                  : "border-beige-200 text-beige-600 hover:border-brand-primary/50"
+                  ? "border-brand-accent bg-brand-accent text-brand-secondary"
+                  : "border-beige-200 text-beige-600 hover:border-brand-accent/50"
               }`}
             >
               {color}
@@ -374,7 +374,7 @@ export default function ProductForm({ initialData, mode }: ProductFormProps) {
                 <img
                   src={url}
                   alt={`New image ${index + 1}`}
-                  className="h-full w-full rounded-sm border border-brand-primary/30 object-cover"
+                  className="h-full w-full rounded-sm border border-brand-accent/30 object-cover"
                 />
                 <button
                   type="button"
@@ -400,7 +400,7 @@ export default function ProductForm({ initialData, mode }: ProductFormProps) {
         <button
           type="button"
           onClick={() => fileInputRef.current?.click()}
-          className="border border-dashed border-beige-300 px-6 py-4 text-sm text-beige-500 transition-colors hover:border-brand-primary hover:text-brand-primary"
+          className="border border-dashed border-beige-300 px-6 py-4 text-sm text-beige-500 transition-colors hover:border-brand-accent hover:text-brand-accent"
         >
           + Upload Images
         </button>
@@ -411,7 +411,7 @@ export default function ProductForm({ initialData, mode }: ProductFormProps) {
         <button
           type="submit"
           disabled={loading}
-          className="inline-flex items-center gap-2 bg-brand-dark px-8 py-3 text-xs font-medium uppercase tracking-[0.2em] text-white transition-colors hover:bg-brand-primary disabled:opacity-50"
+          className="inline-flex items-center gap-2 bg-brand-secondary px-8 py-3 text-xs font-medium uppercase tracking-[0.2em] text-white transition-colors hover:bg-brand-accent hover:text-brand-secondary disabled:opacity-50"
         >
           {loading && <LoadingSpinner size="sm" />}
           {mode === "create" ? "Add Product" : "Update Product"}
